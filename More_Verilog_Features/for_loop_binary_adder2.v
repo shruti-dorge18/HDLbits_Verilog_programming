@@ -26,7 +26,8 @@ endmodule
 
 module fadd (input a,b,cin, output sum,cout);
     
-    assign {cout,sum}= a+b+cin;
+    assign {cout,sum}= a+b+cin;   // OR  assign sum  = a ^ b ^ cin;
+                                  //     assign cout = a & b | cin & (a^b);
     
 endmodule
 
